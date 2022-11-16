@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/**** Navigation Bar ****/
+
+.test{
+    top: 1;
+    left: 1;
+    z-index: 20;
+}
+
+.superscript{
+    vertical-align:super;
+    font-size: 1rem;
+    font-weight: 10;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.1rem;
+}
+
+body {
+    overflow-x: hidden; 
+}
+
+.nav-wrapper{
+    position: fixed;
+    margin-top: 7.5rem;
+    top: 12rem;
+    left: 6vw;
+    z-index: 3;
+}
+
+nav a.nav-link{
+    border: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.07rem;
+    margin-bottom: 0.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    width: 9rem;
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 500;
+    transition: all 0.15s ease-in;
+}
+
+nav a.nav-link:hover {
+    border: solid black 0.01rem;
+    background-color: white;
+    color: black;
+}
+
+nav a.nav-link:visited{
+    text-decoration: none;
+}
+
+/**** Header ****/
+.flex-container{
+    margin-left: 26rem;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    column-gap: 5rem;
+    row-gap: 2rem;
+    display: inline-grid;
+    width: 70vw;
+    grid-template-columns: auto auto auto auto;
+}
+
+#prof-pic{
+    position: fixed;
+    margin-top: 1rem;
+    left: 3.5vw;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-color: black;
+    border: 0.15rem solid black;
+    z-index: 3;
+    box-shadow: 0 3px 2px rgb(0 0 0 / 0.2);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/**** About Me ****/
+.aboutme-wrapper{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 30vw;
+    margin-top: 0.6rem;
+}
+
+#aboutme-header{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 3vmax;
+}
+
+#aboutme-text{
+    color: black;
+    font-family: 'Lato';
+    margin-top: 2vh;
+    font-size: 1.2rem;
+}
+
+/**** Skills ****/
+
+.skills-wrapper{
+    width: 28.5vw;
+    height: 2vh;
+}
+
+#skills-header{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 3vmax;
+}
+
+.containerStyles{
+    display: inline-block;
+    height: 0.3rem;
+    width: 100%;
+    background-color: lightgray;
+    margin-right: 10vw;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+.fillerStyles{
+    transition: "width 2s ease-in-out";
+}
+
+.labelStyles{
+    padding-top: 10vh;
+    position: relative;
+    color: black;
+    font-weight: 'bold';
+    font-family: 'Roboto';
+}
+
+/**** Projects ****/
+.projects-wrapper{
+    grid-column-start: 2;
+    grid-column-end: 1;
+    grid-row-start: 3;
+}
+
+#projects-header{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 3vmax;
+}
+
+.slider{
+    grid-column-start: 2;
+    grid-column-end: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 1rem;
+}
+
+.image{
+    position: absolute;
+    object-fit: cover;
+    margin-top: 0vh;
+    align-items: left;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 1rem;
+    filter: grayscale(100%);
+    z-index: 4;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+}
+
+.image:hover{
+    cursor: pointer;
+    height: 41vh;
+    width: 30.1vw;
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+.slider-shadow1{    
+    grid-column-start: 1;
+    grid-row-start: 4;
+    display: inline-block;
+    position: absolute;
+    margin-top: 40vh;
+    left: 65rem;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+    z-index: 3;
+    transition: 0.2s ease-in-out;
+    background-color: grey;
+}
+
+.slider-shadow1:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: height 0.2s ease-in-out , width 0.2s ease-in-out;
+}
+
+.slider-shadow2{
+    display: inline-block;
+    position: absolute;
+    margin-top: 140vh;
+    left: 30rem;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+    z-index: -2;
+    opacity: 50%;
+    transition: 0.2s ease-in-out;
+    background-color: lightgrey;
+}
+
+.slider-shadow2:hover{
+    cursor: pointer;
+    height: 31vh;
+    width: 30.1vw;
+    transition: height 0.2s ease-in-out , width 0.2s ease-in-out;
+}
+
+.slider-button{
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 40vw;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    user-select: none;
+    z-index: 10;
+    transition: all 0.15s ease-in;
+}
+
+.slider-button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/**** Contact Form ****/
+
+.contact-wrapper{
+    grid-column-start: 1;
+    grid-row-start: 4;
+    z-index: -5;
+    margin-top: 41vh;
+}
+
+#contact-header{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 3vmax;
+}
+
+.contact{
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-input{
+    box-shadow: 0 2px 2px rgb(0 0 0 / 0.3);
+    background-color: grey;
+    border-radius: 16px;
+    border: none;
+    margin: 1rem; 
+}
+
+.email-input{
+    box-shadow: 0 2px 2px rgb(0 0 0 / 0.3);
+    background-color: grey;
+    border-radius: 16px;
+    border: none;
+    margin: 1rem; 
+}
+
+.label{
+    font-family: 'Lato';
+    font-weight: 700;
+    margin-left: 1.2rem;
+}
