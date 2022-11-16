@@ -34,7 +34,7 @@ body {
 }
 
 nav a.nav-link{
-    border: 0;
+    border: 0.01rem solid transparent;
     font-size: 0.7rem;
     letter-spacing: 0.07rem;
     margin-bottom: 0.5rem;
@@ -64,11 +64,11 @@ nav a.nav-link:visited{
     margin-left: 26rem;
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
-    column-gap: 5rem;
+    column-gap: 3rem;
     row-gap: 2rem;
     display: inline-grid;
     width: 70vw;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
 }
 
 #prof-pic{
@@ -104,8 +104,8 @@ nav a.nav-link:visited{
 #aboutme-text{
     color: black;
     font-family: 'Lato';
-    margin-top: 2vh;
-    font-size: 1.2rem;
+    margin-top: 3vh;
+    font-size: 1.1rem;
 }
 
 /**** Skills ****/
@@ -146,9 +146,10 @@ nav a.nav-link:visited{
 
 /**** Projects ****/
 .projects-wrapper{
-    grid-column-start: 2;
-    grid-column-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 3;
+
 }
 
 #projects-header{
@@ -158,101 +159,67 @@ nav a.nav-link:visited{
     font-size: 3vmax;
 }
 
-.slider{
-    grid-column-start: 2;
-    grid-column-end: 1;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 1rem;
-}
-
 .image{
     position: absolute;
-    object-fit: cover;
-    margin-top: 0vh;
-    align-items: left;
     width: 30vw;
-    height: 40vh;
+    height: 35vh;
+    object-fit: cover;
     border-radius: 1rem;
     filter: grayscale(100%);
-    z-index: 4;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+
 }
 
-.image:hover{
+
+.card-component:hover{
     cursor: pointer;
-    height: 41vh;
-    width: 30.1vw;
-    transform: scale(1.01);
+    transform: scale(1.02);
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.5);
     transition: 0.2s ease-in-out;
 }
 
-.slider-shadow1{    
-    grid-column-start: 1;
-    grid-row-start: 4;
-    display: inline-block;
-    position: absolute;
-    margin-top: 40vh;
-    left: 65rem;
+.card-component{    
+    margin-top: 3vh;
+    margin-right: 5vw;
     width: 30vw;
-    height: 40vh;
+    height: 35vh;
+    display: inline-block;
     border-radius: 1rem;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
-    z-index: 3;
+    z-index: -1;
     transition: 0.2s ease-in-out;
     background-color: grey;
 }
 
-.slider-shadow1:hover{
-    cursor: pointer;
-    transform: scale(1.01);
-    transition: height 0.2s ease-in-out , width 0.2s ease-in-out;
-}
-
-.slider-shadow2{
-    display: inline-block;
-    position: absolute;
-    margin-top: 140vh;
-    left: 30rem;
-    width: 30vw;
-    height: 40vh;
-    border-radius: 1rem;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
-    z-index: -2;
-    opacity: 50%;
-    transition: 0.2s ease-in-out;
-    background-color: lightgrey;
-}
-
-.slider-shadow2:hover{
-    cursor: pointer;
-    height: 31vh;
-    width: 30.1vw;
-    transition: height 0.2s ease-in-out , width 0.2s ease-in-out;
-}
-
-.slider-button{
-    width: 5rem;
-    height: 5rem;
-    font-size: 1rem;
-    position: absolute;
-    margin-top: 40vh;
-    margin-left: 40vw;
-    border-radius: 50%;
-    color: white;
-    background-color: black;
-    user-select: none;
-    z-index: 10;
-    transition: all 0.15s ease-in;
-}
-
-.slider-button:hover{
-    background-color: white;
+.project-title{
+    margin-top: 0.1rem;
+    font-family: "Lato";
+    font-size: 1.5rem;
+    display: wrap;
+    font-weight: 600;
     color: black;
 }
 
+.card-wrapper{
+    display: inline-block;
+}
+
+.tag{
+    text-align: center;
+    font-family: "Lato";
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: rgb(156, 156, 156);
+    padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+    margin-top: 0.3rem;
+    margin-right: 0.2rem;
+    border-radius: 16px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.tag-wrapper{
+    display: inline-block;
+}
 
 /**** Contact Form ****/
 
@@ -260,7 +227,6 @@ nav a.nav-link:visited{
     grid-column-start: 1;
     grid-row-start: 4;
     z-index: -5;
-    margin-top: 41vh;
 }
 
 #contact-header{
