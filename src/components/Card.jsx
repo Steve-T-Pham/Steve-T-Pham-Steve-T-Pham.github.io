@@ -11,7 +11,6 @@ const Card = (props) => {
             {props.child}
             <p className="project-title">{props.title}</p>
         </div>
-
     );
 }
 

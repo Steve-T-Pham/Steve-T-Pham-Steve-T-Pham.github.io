@@ -5,13 +5,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /**** Navigation Bar ****/
-
-.test{
-    top: 1;
-    left: 1;
-    z-index: 20;
-}
-
 .superscript{
     vertical-align:super;
     font-size: 1rem;
@@ -61,14 +54,12 @@ nav a.nav-link:visited{
 
 /**** Header ****/
 .flex-container{
-    margin-left: 26rem;
+    margin-left: 24.5rem;
     display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
-    column-gap: 3rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));*/
     row-gap: 2rem;
-    display: inline-grid;
     width: 70vw;
-    grid-template-columns: auto auto;
+    grid-template-columns: 35vw 35vw;
 }
 
 #prof-pic{
@@ -90,7 +81,7 @@ nav a.nav-link:visited{
 .aboutme-wrapper{
     grid-column-start: 1;
     grid-column-end: 1;
-    width: 30vw;
+    width: fit-content;
     margin-top: 0.6rem;
 }
 
@@ -108,11 +99,15 @@ nav a.nav-link:visited{
     font-size: 1.1rem;
 }
 
+.text-wrapper{
+    width: 32vw;
+}
 /**** Skills ****/
 
 .skills-wrapper{
-    width: 28.5vw;
-    height: 2vh;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 30vw;
 }
 
 #skills-header{
@@ -137,19 +132,17 @@ nav a.nav-link:visited{
 }
 
 .labelStyles{
-    padding-top: 10vh;
-    position: relative;
+    margin-top: 5rem;
     color: black;
-    font-weight: 'bold';
-    font-family: 'Roboto';
+    font-weight: 500;
+    font-family: "Lato";
 }
 
 /**** Projects ****/
 .projects-wrapper{
-    grid-column-start: 1;
+    grid-column: 1 / span 2;
     grid-column-end: 3;
     grid-row-start: 3;
-
 }
 
 #projects-header{
@@ -223,10 +216,21 @@ nav a.nav-link:visited{
 
 /**** Contact Form ****/
 
-.contact-wrapper{
-    grid-column-start: 1;
+.contactme-wrapper{
+    grid-column: 1 / span 2;
     grid-row-start: 4;
-    z-index: -5;
+    flex-direction: row;
+}
+
+.contact-wrapper{
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem;
+    width: 65vw;
+    display: inline-block;
+
 }
 
 #contact-header{
@@ -236,30 +240,73 @@ nav a.nav-link:visited{
     font-size: 3vmax;
 }
 
-.contact{
+.form-wrapper{
+    grid-column-start: 1;
+    grid-column-end: 1;
     align-items: left;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    width: 33vw;
 }
 
 .name-input{
-    box-shadow: 0 2px 2px rgb(0 0 0 / 0.3);
-    background-color: grey;
-    border-radius: 16px;
-    border: none;
+    border: solid black 0.01rem;
+    border-radius: 0.7rem;
+    width: 28vw;
     margin: 1rem; 
+    padding: 0.6rem;
 }
 
 .email-input{
-    box-shadow: 0 2px 2px rgb(0 0 0 / 0.3);
-    background-color: grey;
-    border-radius: 16px;
-    border: none;
+    width: 28vw;
+    border: solid black 0.01rem;
+    border-radius: 0.7rem;
     margin: 1rem; 
+    padding: 0.6rem;
+}
+
+.message{
+    width: 28vw;
+    border: solid black 0.01rem;
+    border-radius: 1rem;
+    margin: 1rem; 
+    resize: none;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 .label{
     font-family: 'Lato';
     font-weight: 700;
     margin-left: 1.2rem;
+}
+
+.send-button{
+    border: 0.01rem solid transparent;
+    font-size: 0.7rem;
+    letter-spacing: 0.07rem;
+    margin-bottom: 0.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    height: 2rem;
+    width: 4rem;
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 500;
+    transition: all 0.15s ease-in;
+    margin-left: 1.2rem;
+}
+
+.send-button:hover{
+    border: solid black 0.01rem;
+    background-color: white;
+    color: black;
+}
+
+.info{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    flex-direction: row;
+    display: inline-block;
 }

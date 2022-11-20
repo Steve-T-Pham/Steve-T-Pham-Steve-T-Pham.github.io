@@ -6,18 +6,15 @@ const Skills = (props) => {
 
     const fillerStyles = {
         transition: "width 2s ease-in-out",
-        height: "100%",
+        height: "inherit",
         backgroundColor: "black",
         borderRadius: "inherit",
         textAlign: "left",
-        fontFamily: "courier prime",
-        fontWeight: "500",
         width: percent
     }
 
     useEffect(() => {setPercent(props.percent)}, []);
 
-    //want to eventually add animation
     return (
             <div className="containerStyles">
                 <div className="fillerStyles" style={fillerStyles}>

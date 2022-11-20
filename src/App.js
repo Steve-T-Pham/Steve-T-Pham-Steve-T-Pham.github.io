@@ -19,7 +19,7 @@ const App = () => {
       <Header />
       <AboutMe />
       <div className="skills-wrapper">
-        <div id="skills-header"><sup className="superscript">//02&nbsp;</sup>Skills</div> 
+        <h1 id="skills-header"><sup className="superscript">//02&nbsp;</sup>Skills</h1> 
         <Skills name={'HTML'} percent={'90%'}/>
         <Skills name={'CSS'} percent={'80%'}/>
         <Skills name={'JavaScript'} percent={'75%'}/>
@@ -63,10 +63,11 @@ const App = () => {
                       </div>}/>      
       </div>
 
-      <div className="contact-wrapper">
+      <div className="contactme-wrapper">
         <h1 id="contact-header"><sup className="superscript">//04&nbsp;</sup>Contact Me</h1>  
         <ContactForm />
       </div>
+
     </div>
 
 
