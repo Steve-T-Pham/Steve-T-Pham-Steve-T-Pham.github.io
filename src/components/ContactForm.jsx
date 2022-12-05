@@ -34,12 +34,9 @@ const ContactForm = () => {
             
             <div className="form-wrapper">
                 <form onSubmit={submit}>
+                    <input className="name-input" type="text" name="name" placeholder="Name" required></input><br></br>
 
-                    <label className="label" for="name">Name</label><br></br>
-                    <input className="name-input" type="text" name="name" required></input><br></br>
-
-                    <label className="label" for="email">Email</label><br></br>
-                    <input className="email-input" type="email" name="email" required></input>
+                    <input className="email-input" type="email" name="email" placeholder="Email" required></input>
 
                     <textarea className="message" name="message" rows="5"></textarea><br></br>
 
@@ -48,10 +45,12 @@ const ContactForm = () => {
             </div>
 
             <div className="info">
-                <div>Email: stp40@case.edu <br></br>
-                    Feel free to contact over career aspects, or if you just want to have a chat!
-
-                </div>
+                <strong>Contact:</strong><br></br>
+                <span classname="email-info">stp40@case.edu</span><br></br><br></br>
+                    <strong>Based in:</strong><br></br>
+                    Cleveland, OH<br></br><br></br>
+                    <strong>Feel free to contact over career aspects, <br></br>
+                    or if you just want to have a chat!</strong>
             </div>
         </div>
     );

@@ -14,22 +14,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
     <React.Fragment>       
-
     <div className="flex-container">    
       <Header />
       <AboutMe />
       <div className="skills-wrapper">
         <h1 id="skills-header"><sup className="superscript">//02&nbsp;</sup>Skills</h1> 
-        <Skills name={'HTML'} percent={'90%'}/>
+        <Skills name={'HTML'} percent={'80%'}/>
         <Skills name={'CSS'} percent={'80%'}/>
         <Skills name={'JavaScript'} percent={'75%'}/>
-        <Skills name={'React'} percent={'70%'}/>
+        <Skills name={'React'} percent={'80%'}/>
         <Skills name={'Java'} percent= {'70%'}/>
       </div>
 
       <div className="projects-wrapper">
         <h1 id="projects-header"><sup className="superscript">//03&nbsp;</sup>Projects</h1>
-        <Card img="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
+        <Card img="https://cdn.pixabay.com/photo/2017/11/30/12/35/cat-2988354_960_720.jpg" alt="Project display picture"
+              link="https://github.com/Desdaemon/moolah"
+              title="Moolah"
+              child={<div classname="tag-wrapper">
+                      <Tag name="react" />
+                      <Tag name="tailwind" />
+                      <Tag name="typescript" />
+                      <Tag name="nextjs" />
+                      </div>}/>
+        <Card img="https://cdn.pixabay.com/photo/2015/03/10/18/46/taiwan-667563_960_720.jpg" alt="Project display picture"
               link="https://github.com/Steve-T-Pham/CWRU-dating-website"
               title="CWRU Dating Website"
               child={<div classname="tag-wrapper">
@@ -37,43 +45,20 @@ const App = () => {
                       <Tag name="springboot" />
                       <Tag name="sql" />
                       </div>}/>
-        <Card img="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
-              link="https://github.com/Desdaemon/moolah"
-              title="Moolah"
-              child={<div classname="tag-wrapper">
-                      <Tag name="react" />
-                      <Tag name="tailwind" />
-                      <Tag name="typescript" />
-                      </div>}/>
-        <Card img="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/640px-Cat03.jpg"
-              link="https://github.com/Steve-T-Pham/CWRU-dating-website"
-              title="Test Project"
+        <Card img="https://img5.goodfon.com/wallpaper/nbig/f/57/tamara-andreeva-priroda-peizazh-gory-altai-zhivotnoe-kot.jpg" alt="Project display picture"
+              link="https://github.com/Steve-T-Pham/Kanji-Dictionary"
+              title="Kanji Dictionary"
               child={<div classname="tag-wrapper">
                       <Tag name="java" />
-                      <Tag name="springboot" />
-                      <Tag name="sql" />
-                      </div>}/>
-        <Card img="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
-              link="https://github.com/Steve-T-Pham/CWRU-dating-website"
-              title="Test Project"
-              child={<div classname="tag-wrapper">
-                      <Tag name="react" />
-                      <Tag name="tailwind" />
-                      <Tag name="sql" />
-                      </div>}/>      
+                      <Tag name="jsoup" />
+                      </div>}/>  
+        <div className="contactme-wrapper">
+          <h1 id="contact-header"><sup className="superscript">//04&nbsp;</sup>Contact Me</h1>  
+          <ContactForm />
+        </div>
       </div>
-
-      <div className="contactme-wrapper">
-        <h1 id="contact-header"><sup className="superscript">//04&nbsp;</sup>Contact Me</h1>  
-        <ContactForm />
-      </div>
-
     </div>
-
-
     <Navigation />
-
-
     </React.Fragment>
   );
 }

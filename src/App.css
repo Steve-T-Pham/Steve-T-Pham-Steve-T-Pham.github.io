@@ -31,7 +31,7 @@ nav a.nav-link{
     font-size: 0.7rem;
     letter-spacing: 0.07rem;
     margin-bottom: 0.5rem;
-    border-radius: 16px;
+    border-radius: 2rem;
     cursor: pointer;
     color: white;
     background-color: black;
@@ -96,7 +96,7 @@ nav a.nav-link:visited{
     color: black;
     font-family: 'Lato';
     margin-top: 3vh;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
 }
 
 .text-wrapper{
@@ -217,6 +217,7 @@ nav a.nav-link:visited{
 /**** Contact Form ****/
 
 .contactme-wrapper{
+    margin-top: 1rem;
     grid-column: 1 / span 2;
     grid-row-start: 4;
     flex-direction: row;
@@ -229,8 +230,8 @@ nav a.nav-link:visited{
     border-top-right-radius: 1rem;
     padding: 1rem;
     width: 65vw;
-    display: inline-block;
-
+    display: flex;
+    flex-direction: row;
 }
 
 #contact-header{
@@ -250,17 +251,21 @@ nav a.nav-link:visited{
 
 .name-input{
     border: solid black 0.01rem;
-    border-radius: 0.7rem;
+    border-radius:  2rem;
     width: 28vw;
     margin: 1rem; 
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
     padding: 0.6rem;
 }
 
 .email-input{
     width: 28vw;
     border: solid black 0.01rem;
-    border-radius: 0.7rem;
+    border-radius: 2rem;
     margin: 1rem; 
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
     padding: 0.6rem;
 }
 
@@ -272,12 +277,6 @@ nav a.nav-link:visited{
     resize: none;
     padding: 1rem;
     overflow: hidden;
-}
-
-.label{
-    font-family: 'Lato';
-    font-weight: 700;
-    margin-left: 1.2rem;
 }
 
 .send-button{
@@ -305,8 +304,7 @@ nav a.nav-link:visited{
 }
 
 .info{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    flex-direction: row;
     display: inline-block;
+    margin-top: 1rem;
+    font-weight: 300;
 }
