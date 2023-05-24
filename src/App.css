@@ -5,13 +5,17 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /**** Navigation Bar ****/
-.superscript{
-    vertical-align:super;
-    font-size: 1rem;
-    font-weight: 10;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 0.1rem;
+
+.home{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+}
+
+.main-content{
+    margin-top: 3rem;
+    max-width: fit-content;
+    height: fit-content;
 }
 
 body {
@@ -19,26 +23,37 @@ body {
 }
 
 .nav-wrapper{
-    position: fixed;
-    margin-top: 7.5rem;
-    top: 12rem;
-    left: 6vw;
+    display: inline-flex;
+    flex-direction: column;
     z-index: 3;
+    text-align: center;
+    margin-left: 1rem;
+    height: 100vh;
+    width: 20rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav a.nav-link{
     border: 0.01rem solid transparent;
     font-size: 0.7rem;
-    letter-spacing: 0.07rem;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
     border-radius: 2rem;
     cursor: pointer;
     color: white;
     background-color: black;
-    width: 9rem;
+    width: 10rem;
     text-align: center;
-    font-family: 'Lato';
-    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
     transition: all 0.15s ease-in;
 }
 
@@ -52,29 +67,34 @@ nav a.nav-link:visited{
     text-decoration: none;
 }
 
-/**** Header ****/
-.flex-container{
-    margin-left: 24.5rem;
-    display: inline-grid;
-    /*grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));*/
-    row-gap: 2rem;
-    width: 70vw;
-    grid-template-columns: 35vw 35vw;
-}
-
 #prof-pic{
-    position: fixed;
-    margin-top: 1rem;
-    left: 3.5vw;
-    height: 15rem;
-    width: 15rem;
+    display: flex;
+    height: 12rem;
+    width: 12rem;
+    margin-bottom: 2rem;
     border-radius: 50%;
     background-color: black;
-    border: 0.15rem solid black;
     z-index: 3;
-    box-shadow: 0 3px 2px rgb(0 0 0 / 0.2);
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+}
+
+/**** Header ****/
+
+.superscript{
+    vertical-align: super;
+    font-size: 1rem;
+    font-weight: 10;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.1rem;
+}
+
+.flex-container{
+    display: inline-grid;
+    row-gap: 2rem;
+    width: fit-content;
+    grid-template-columns: 35vw 35vw;
 }
 
 /**** About Me ****/
@@ -87,8 +107,8 @@ nav a.nav-link:visited{
 
 #aboutme-header{
     color: black;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
     font-size: 3vmax;
 }
 
@@ -112,8 +132,8 @@ nav a.nav-link:visited{
 
 #skills-header{
     color: black;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
     font-size: 3vmax;
 }
 
@@ -135,7 +155,7 @@ nav a.nav-link:visited{
     margin-top: 5rem;
     color: black;
     font-weight: 500;
-    font-family: "Lato";
+    font-family: "Roboto";
 }
 
 /**** Projects ****/
@@ -147,20 +167,18 @@ nav a.nav-link:visited{
 
 #projects-header{
     color: black;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
     font-size: 3vmax;
 }
 
 .image{
-    position: absolute;
     width: 30vw;
     height: 35vh;
     object-fit: cover;
     border-radius: 1rem;
     filter: grayscale(100%);
     transition: all 0.2s ease-in-out;
-
 }
 
 
@@ -184,30 +202,42 @@ nav a.nav-link:visited{
 }
 
 .project-title{
-    margin-top: 0.1rem;
-    font-family: "Lato";
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     display: wrap;
-    font-weight: 600;
+    font-weight: 100;
     color: black;
+}
+
+.project-desc{
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgb(0, 0, 0, 0.7);
 }
 
 .card-wrapper{
     display: inline-block;
 }
 
+.card-info-wrapper{
+    width: 30vw;
+}
+
 .tag{
     text-align: center;
     font-family: "Lato";
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 300;
     background-color: rgb(156, 156, 156);
     padding: 0.2rem 0.8rem 0.2rem 0.8rem;
-    margin-top: 0.3rem;
     margin-right: 0.2rem;
     border-radius: 16px;
     width: fit-content;
     display: inline-block;
+    color: rgb(14, 14, 14);
 }
 
 .tag-wrapper{
@@ -217,18 +247,14 @@ nav a.nav-link:visited{
 /**** Contact Form ****/
 
 .contactme-wrapper{
-    margin-top: 1rem;
+    margin-top: 3rem;
     grid-column: 1 / span 2;
     grid-row-start: 4;
     flex-direction: row;
 }
 
 .contact-wrapper{
-    margin-top: 2rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    padding: 1rem;
+    margin-top: 1rem;
     width: 65vw;
     display: flex;
     flex-direction: row;
@@ -236,8 +262,8 @@ nav a.nav-link:visited{
 
 #contact-header{
     color: black;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
     font-size: 3vmax;
 }
 
@@ -250,32 +276,37 @@ nav a.nav-link:visited{
 }
 
 .name-input{
-    border: solid black 0.01rem;
-    border-radius:  2rem;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none; 
     width: 28vw;
-    margin: 1rem; 
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    padding: 0.6rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding: 0.3rem;
 }
 
 .email-input{
     width: 28vw;
-    border: solid black 0.01rem;
-    border-radius: 2rem;
-    margin: 1rem; 
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    padding: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none; 
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding: 0.3rem;
 }
 
 .message{
     width: 28vw;
-    border: solid black 0.01rem;
-    border-radius: 1rem;
-    margin: 1rem; 
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none; 
     resize: none;
-    padding: 1rem;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding: 0.3rem;
     overflow: hidden;
 }
 
@@ -283,7 +314,8 @@ nav a.nav-link:visited{
     border: 0.01rem solid transparent;
     font-size: 0.7rem;
     letter-spacing: 0.07rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 16px;
     cursor: pointer;
     color: white;
@@ -291,10 +323,9 @@ nav a.nav-link:visited{
     height: 2rem;
     width: 4rem;
     text-align: center;
-    font-family: 'Lato';
-    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
     transition: all 0.15s ease-in;
-    margin-left: 1.2rem;
 }
 
 .send-button:hover{
@@ -306,5 +337,16 @@ nav a.nav-link:visited{
 .info{
     display: inline-block;
     margin-top: 1rem;
-    font-weight: 300;
+}
+
+.info-bold{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-bottom: 0rem;
+}
+
+.info-light{
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-decoration: none;
 }

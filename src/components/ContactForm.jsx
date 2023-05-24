@@ -38,19 +38,19 @@ const ContactForm = () => {
 
                     <input className="email-input" type="email" name="email" placeholder="Email" required></input>
 
-                    <textarea className="message" name="message" rows="5"></textarea><br></br>
+                    <textarea className="message" name="message" rows="5" placeholder="Type your email here..."></textarea><br></br>
 
-                    <button type="submit" value="Send" className="send-button" onClick={isValidEmail} required>SEND</button>
+                    <button type="submit" value="Send" className="send-button" onClick={isValidEmail} required>Send</button>
                 </form>
             </div>
 
             <div className="info">
-                <strong>Contact:</strong><br></br>
-                <span classname="email-info">stp40@case.edu</span><br></br><br></br>
-                    <strong>Based in:</strong><br></br>
-                    Cleveland, OH<br></br><br></br>
-                    <strong>Feel free to contact over career aspects, <br></br>
-                    or if you just want to have a chat!</strong>
+                <p className="info-bold">Contact:</p>
+                <p className="info-light">stp40@case.edu</p>
+                <p className="info-bold">Based in:</p>
+                <p className="info-light">Cleveland, OH</p>
+                <p className="info-light">Feel free to contact over career aspects, <br></br>
+                    or if you just want to have a chat!</p>
             </div>
         </div>
     );
