@@ -31,7 +31,7 @@ const App = () => {
               <Card img="https://cdn.pixabay.com/photo/2017/11/30/12/35/cat-2988354_960_720.jpg" alt="Project display picture"
                     link="https://github.com/Desdaemon/moolah"
                     title="Moolah"
-                    desc="Senior project, collaborative full-stack website implementation of a stocks interface utilizing Supabase."
+                    desc="Senior project, collaborative full-stack website implementation of a stocks interface utilizing Supabase, a Firebase alternative."
                     child={<div classname="tag-wrapper">
                             <Tag name="tailwind" />
                             <Tag name="typescript" />
