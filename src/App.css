@@ -90,7 +90,6 @@ nav a.nav-link{
 }*/
 
 nav a.nav-link:hover {
-    border: transparent black 0.01rem;
     border-radius: 16px;
     background-color: white;
     color: black;
