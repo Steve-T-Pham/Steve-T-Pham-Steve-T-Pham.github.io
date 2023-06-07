@@ -5,8 +5,6 @@ import Skills from './components/Skills.jsx';
 import Card from './components/Card.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import Tag from './components/Tag.jsx';
-
-
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,8 +13,13 @@ const App = () => {
     <div className="home">   
       <Navigation />    
         <div className="main-content">
-          <div className="flex-container">    
-            <AboutMe />
+          <div className="flex-container">
+
+            <div className="aboutme-wrapper">  
+              <h1 id="aboutme-header"><sup className="superscript">//01&nbsp;</sup>About Me</h1>  
+              <AboutMe />
+            </div>
+
             <div className="skills-wrapper">
               <h1 id="skills-header"><sup className="superscript">//02&nbsp;</sup>Skills</h1> 
               <Skills name={'HTML'} percent={'80%'}/>
@@ -53,16 +56,18 @@ const App = () => {
                     child={<div classname="tag-wrapper">
                             <Tag name="java" />
                             <Tag name="jsoup" />
-                            </div>}/>  
+                            </div>}/>
+              </div>
+
               <div className="contactme-wrapper">
                 <h1 id="contact-header"><sup className="superscript">//04&nbsp;</sup>Contact Me</h1>  
                 <ContactForm />
               </div>
+
             </div>
-          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
 }
 
 export default App;

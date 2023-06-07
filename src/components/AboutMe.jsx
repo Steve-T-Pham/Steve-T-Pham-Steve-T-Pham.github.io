@@ -2,13 +2,12 @@ import React from 'react';
 import { BsPrefixComponent } from 'react-bootstrap/esm/helpers';
 
 const AboutMe = () => {
-    return (<div className="aboutme-wrapper">
-        <h1 id="aboutme-header"><sup className="superscript">//01&nbsp;</sup>About Me</h1>
+    return (
         <div className="text-wrapper">
-            <p id="aboutme-text">"An alumni from <span className="aboutme-bold">Case Western Reserve University</span>, I originally planned on becoming a pharmacist through the school's pre-medical program. However, I discovered my passion for <span className="aboutme-bold">development and design</span>  
-            &nbsp;leading me to pursue further opportunities in the field. Driven to learn and develop my skills as a software engineer, I hope to use the insight and knowledge from my local peers to continue my growth through my <span className="aboutme-bold">self learning and motivation</span>."</p>
+            <p id="aboutme-text">"Passionate <span className="aboutme-bold">Case Western Reserve University</span> alumnus with a degree in Computer Science and minor in Japanese, skilled in development and design. Expertise in <span className="aboutme-bold">algorithms and data structures</span>. Collaborative project builder. Committed to creating innovative and impactful solutions. Strong <span className="aboutme-bold">attention to detail and user experience</span>."
+            <br></br><br></br> 
+            <em>Click the logo on the left for some of my links!</em></p>
         </div>
-    </div>
     );
 }
 

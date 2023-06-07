@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/**** Navigation Bar ****/
 
 a:link {
     text-decoration: none;
@@ -38,56 +34,61 @@ body {
     overflow-x: hidden; 
 }
 
+/**** NavBar ****/
 .nav-wrapper{
     display: inline-flex;
-    flex-direction: column;
-    z-index: 3;
-    text-align: center;
-    margin-left: 1rem;
-    height: 100vh;
+    z-index: 1;
     width: 20rem;
-    text-align: center;
-    align-items: center;
-    margin-top: 10rem;
 }
 
 .nav{
-    background-color: lightgrey;
-    border-radius: 16px;
+    top: 20.5rem;
+    left: 7rem;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 7rem;
 }
 
 nav a.nav-link{
+    text-align: center;
     color: black;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
     width: 6rem;
     transition: all 0.15s ease-in;
     border: 0.01rem solid transparent;
     font-size: 0.8rem;
     border-radius: 16px;
+    opacity: 0;
+    transform: translateY(-2rem);
+    animation: fade-in 0.5s ease-in-out forwards;
 }
 
-/*
-nav a.nav-link{
-    border: 0.01rem solid transparent;
-    font-size: 0.7rem;
-    letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    color: white;
-    background-color: black;
-    width: 10rem;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: lighter;
-    transition: all 0.15s ease-in;
-}*/
+.nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+  
+.nav-link:nth-child(2) {
+    animation-delay: 0.2s;
+}
+  
+.nav-link:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
 
 nav a.nav-link:hover {
     border-radius: 16px;
@@ -95,16 +96,82 @@ nav a.nav-link:hover {
     color: black;
 }
 
-
-#prof-pic{
+.prof-pic{
+    top: 13.5rem;
+    left: 7rem;
+    position: fixed;
     clip-path: inset(10% 10% 10% 10% round 16px);
     height: 7rem;
     width: 7rem;
-    margin-bottom: 1rem;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    transition: all 0.3s ease-out;
+    z-index: 2;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
 
+.prof-pic:hover{
+    cursor: pointer;
+}
+
+.prof-pic.expanded{
+    transform: scale(1.05);
+    transition: all 0.1s ease-in;
+}
+
+.square {
+    position: fixed;
+    top: 13.5rem;
+    left: 7rem;
+    width: 100px;
+    height: 200px;
+}
+  
+.top,
+.middle,
+.bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: lightgrey;
+    z-index: 2;
+}
+  
+.top {
+    top: 0;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 20px 20px 0 0;
+}
+  
+.middle {
+    top: 20px;
+    width: 7rem;
+    height: 3rem;
+    transform: scaleY(1.5);
+    transform-origin: top;
+    transition: all 1s ease;
+}
+  
+.bottom {
+    top: 80px;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 0 0 20px 20px;
+    transition: all 1s ease;
+}
+  
+.middle.expanded {
+    transition: all 1s ease;
+    transform: scaleY(4.6);
+}
+  
+  
+.bottom.expanded {
+    transition: all 1s ease;
+    transform: translateY(155px);
+}
+  
 /**** Header ****/
 
 .superscript{
@@ -142,7 +209,7 @@ nav a.nav-link:hover {
     margin-left: 1.7rem;
     color: black;
     margin-top: 3vh;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 350;
 }
 
