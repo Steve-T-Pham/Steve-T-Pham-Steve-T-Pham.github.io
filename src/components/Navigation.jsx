@@ -11,7 +11,7 @@ const Navigation = () => {
     return(
         <div className="nav-wrapper">
 
-            <a onClick={toggleExpand} href="!#">
+            <a onClick={toggleExpand} >
                 <img src="./favicon.ico" alt="Profile" className={`prof-pic ${expand ? 'expanded' : ''}`}></img>
             </a>
 
