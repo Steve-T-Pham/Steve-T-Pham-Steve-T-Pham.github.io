@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "img": "https://www.schwab.com/learn/sites/g/files/eyrktu1246/files/Getty_500706310_3x2.jpg",
+        "alt": "Project display picture",
+        "link": "https://github.com/Desdaemon/moolah",
+        "title": "Moolah",
+        "desc": "Collaborative full-stack website implementation of a stocks interface utilizing Supabase, a Firebase alternative.",
+        "tags": ["nextjs","typescript", "tailwind"]
+    },
+    {
+        "id": 2,
+        "img": "https://thefeminineenergy.com/wp-content/uploads/2023/05/Romantic-first-coffee-date.webp",
+        "alt": "Project display picture",
+        "link": "https://github.com/Steve-T-Pham/CWRU-dating-website",
+        "title": "CWRU Dating Website",
+        "desc": "Collaboratively built full-stack website for students to create accounts and answer a questionnaire, thus allowing our algorithm to match them.",
+        "tags": ["java", "springboot", "sql"]
+    },
+    { 
+        "id": 3,
+        "img": "https://media.istockphoto.com/id/1293009425/photo/a-couple-having-a-fun-conversation-with-smile-at-a-cafe.jpg?s=612x612&w=0&k=20&c=AD2RTgsBnjXxCfE67zk_pYTlzFffUwX-XhtWs8KeAZQ=",
+        "alt": "Project display picture",
+        "link": "https://github.com/Steve-T-Pham/Kanji-Dictionary",
+        "title": "Kanji Dictionary",
+        "desc": "An app leveraging my interests in Japanese, returning all standardized JLPT N5 words, and one of my earliest projects utilizing web scraping with implemented search functionality.",
+        "tags": ["java", "jsoup"]
+    },
+    {
+        "id": 4,
+        "img": "https://www.stepes.com/wp-content/uploads/2014/09/business-meeting-interpretation.jpg?1",
+        "alt": "Project display picture",
+        "link": "https://github.com/Steve-T-Pham/japanese-dictionary",
+        "desc": "Updated version of old Kanji dictionary, utilizing new tech stack, implementing Jisho API for dedicated Japanese words listing their JLPT level, parts of speech, and all readings of the characters",
+        "tags": ["nextjs","typescript", "tailwind"]
+
+    }
+]             

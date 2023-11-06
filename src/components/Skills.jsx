@@ -1,8 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
-const Skills = (props) => {
-    const [percent, setPercent] = useState(0);
+const Skills = ({percent, name}) => {
 
     const fillerStyles = {
         transition: "width 2s ease-in-out",
@@ -13,12 +11,10 @@ const Skills = (props) => {
         width: percent
     }
 
-    useEffect(() => {setPercent(props.percent)}, []);
-
     return (
             <div className="containerStyles">
                 <div className="fillerStyles" style={fillerStyles}>
-                    <span className="labelStyles">{props.name}</span>
+                    <span className="labelStyles">{name}</span>
                 </div>
             </div>
     );

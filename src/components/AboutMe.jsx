@@ -1,12 +1,16 @@
 import React from 'react';
-import { BsPrefixComponent } from 'react-bootstrap/esm/helpers';
 
 const AboutMe = () => {
     return (
         <div className="text-wrapper">
-            <p id="aboutme-text">"Passionate <span className="aboutme-bold">Case Western Reserve University</span> alumnus with a degree in Computer Science and minor in Japanese, skilled in development and design. Expertise in <span className="aboutme-bold">algorithms and data structures</span>. Collaborative project builder. Committed to creating innovative and impactful solutions. Strong <span className="aboutme-bold">attention to detail and user experience</span>."
-            <br></br><br></br> 
-            <em>Click the logo on the left for some of my links!</em></p>
+            <p id="aboutme-text"> <span className="aboutme-bold"><em>Steve Pham</em></span> 
+            <br />
+            <em>Case Western Reserve Alumnus && Front-End Developer && Back-End Developer</em>
+            <br />
+            Experienced in leveraging React for Front-End projects and adept in utilizing Node, Express, and MongoDB for Back-End development. Focused on honing skills through practical application in crafting user-centric applications, seeking to contribute and grow in a junior role.      
+            <br />
+            <br />                          
+            Click the button on the left for some of my links!</p>
         </div>
     );
 }

@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@media (max-width: 1000px) {
+    .card {
+        flex-basis: calc(50% - 2px); 
+        max-width: calc(50% - 2px); 
+    }
+}
+
 a:link {
     text-decoration: none;
 }
@@ -42,13 +49,13 @@ body {
 }
 
 .nav{
-    top: 20.5rem;
-    left: 7rem;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 7rem;
+    top: 10.5rem;
+    left: 1.5vw;
 }
 
 nav a.nav-link{
@@ -61,7 +68,7 @@ nav a.nav-link{
     transition: all 0.15s ease-in;
     border: 0.01rem solid transparent;
     font-size: 0.8rem;
-    border-radius: 16px;
+    border-radius: 0.5rem;
     opacity: 0;
     transform: translateY(-2rem);
     animation: fade-in 0.5s ease-in-out forwards;
@@ -91,16 +98,15 @@ nav a.nav-link{
 }
 
 nav a.nav-link:hover {
-    border-radius: 16px;
     background-color: white;
     color: black;
 }
 
 .prof-pic{
-    top: 13.5rem;
-    left: 7rem;
-    position: fixed;
-    clip-path: inset(10% 10% 10% 10% round 16px);
+    position: absolute;
+    top: 3.5rem;
+    left: 1.5vw;
+    clip-path: inset(12% 12% 12% 12% round 10px);
     height: 7rem;
     width: 7rem;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -112,6 +118,8 @@ nav a.nav-link:hover {
 
 .prof-pic:hover{
     cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.1s ease-in;
 }
 
 .prof-pic.expanded{
@@ -120,11 +128,12 @@ nav a.nav-link:hover {
 }
 
 .square {
-    position: fixed;
-    top: 13.5rem;
-    left: 7rem;
+    position: relative;
+    top: 3.5rem;
+    left: 1.5vw;
     width: 100px;
     height: 200px;
+    z-index: 0;
 }
   
 .top,
@@ -141,7 +150,7 @@ nav a.nav-link:hover {
     top: 0;
     height: 2rem;
     width: 7rem;
-    border-radius: 20px 20px 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
   
 .middle {
@@ -157,7 +166,7 @@ nav a.nav-link:hover {
     top: 80px;
     height: 2rem;
     width: 7rem;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 0.5rem 0.5rem;
     transition: all 1s ease;
 }
   
@@ -173,7 +182,6 @@ nav a.nav-link:hover {
 }
   
 /**** Header ****/
-
 .superscript{
     vertical-align: super;
     font-size: 1rem;
@@ -183,18 +191,17 @@ nav a.nav-link:hover {
     letter-spacing: 0.1rem;
 }
 
-.flex-container{
-    display: inline-grid;
-    row-gap: 2rem;
-    width: fit-content;
-    grid-template-columns: 35vw 35vw;
+.grid-container{
+    display: grid;
+    grid-gap: 1rem;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
 }
 
 /**** About Me ****/
 .aboutme-wrapper{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    width: fit-content;
+    grid-column: 1 / span 1;
+    width: 100%;
     margin-top: 0.6rem;
 }
 
@@ -203,6 +210,7 @@ nav a.nav-link:hover {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: 2.5vmax;
+    margin-bottom: -10px;
 }
 
 #aboutme-text{
@@ -211,6 +219,11 @@ nav a.nav-link:hover {
     margin-top: 3vh;
     font-size: 1.2rem;
     font-weight: 350;
+    width: calc(100% - 3.4rem);
+    overflow-wrap: break-word;
+    max-height: 30vh;
+    overflow: auto;
+    padding-right: 10px;
 }
 
 .aboutme-bold{
@@ -218,7 +231,7 @@ nav a.nav-link:hover {
 }
 
 .text-wrapper{
-    width: 32vw;
+    width: 100%;
 }
 
 /**** Skills ****/
@@ -226,7 +239,7 @@ nav a.nav-link:hover {
 .skills-wrapper{
     grid-column-start: 2;
     grid-column-end: 2;
-    width: 30vw;
+    width: 90%;
 }
 
 #skills-header{
@@ -242,9 +255,7 @@ nav a.nav-link:hover {
     height: 0.3rem;
     width: 100%;
     background-color: lightgray;
-    margin-right: 10vw;
     margin-top: 3vh;
-    margin-bottom: 2vh;
 }
 
 .fillerStyles{
@@ -262,8 +273,7 @@ nav a.nav-link:hover {
 /**** Projects ****/
 .projects-wrapper{
     grid-column: 1 / span 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
+    width: 100%;
 }
 
 #projects-header{
@@ -271,72 +281,79 @@ nav a.nav-link:hover {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: 2.5vmax;
+    margin-bottom: 0.5rem !important;
 }
 
-.image{
-    width: 30vw;
-    height: 35vh;
-    object-fit: cover;
-    border-radius: 1rem;
-    filter: grayscale(100%);
-    transition: all 0.2s ease-in-out;
+.cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1px;
+    margin-left: 1.7rem;
 }
 
-
-.card-component:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: 0 5px 5px rgb(0 0 0 / 0.5);
+.card{
+    flex: 0 0 calc(30% - 2px);
+    max-width: calc(30% - 2px); 
+    display: block;
+    padding: 1.5rem;
+    max-width: 30%;
+    height: 50em;
     transition: 0.2s ease-in-out;
+    border: 0 !important;
+    box-sizing: border-box;
 }
 
-
-.project-title{
-    margin-top: 0.5rem;
-    margin-bottom: 0.1rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.8rem;
-    display: wrap;
-    font-weight: 100;
-    color: black;
-}
-
-.project-desc{
-    margin-top: 0.6rem;
-    margin-bottom: 0rem;
-    font-size: 0.9rem;
-    font-style: italic;
-    color: rgb(0, 0, 0, 0.7);
-}
-
-.card-wrapper{
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-    padding: 1.7rem;
-    margin: 0.6rem;
-    max-width: fit-content;
-    transition: 0.2s ease-in-out;
-    border-radius: 16px;
-}
-
-.card-wrapper:hover{
-    transform: scale(1.01);
+.card:hover{
     text-decoration: none;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     background-color: lightgrey;
 }
 
+.image{
+    max-width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.project-title{
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+    display: wrap;
+    font-weight: 100;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-desc{
+    margin-top: 0.6rem;
+    margin-bottom: 0rem;
+    font-size: 0.8vw;
+    font-style: italic;
+    height: fit-content;
+    width: 100%;
+    color: rgb(0, 0, 0, 0.7);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .card-info-wrapper{
     text-decoration: none;
-    width: 30vw;
+    width: 100%;
 }
 
 .tag{
     text-align: center;
     font-family: "Lato";
-    font-size: 0.7rem;
+    font-size: 0.6vw;
     font-weight: 500;
     background-color: rgb(156, 156, 156);
     padding: 0.2rem 0.8rem 0.2rem 0.8rem;
@@ -348,12 +365,14 @@ nav a.nav-link:hover {
 }
 
 .tag-wrapper{
-    display: inline-block;
+    display: flex;
 }
 
 /**** Contact Form ****/
 
 .contactme-wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; 
     margin-top: 3rem;
     grid-column: 1 / span 2;
     grid-row-start: 4;
@@ -363,7 +382,6 @@ nav a.nav-link:hover {
 .contact-wrapper{
     margin-left: 1.7rem;
     margin-top: 1rem;
-    width: 65vw;
     display: flex;
     flex-direction: row;
 }
@@ -377,17 +395,17 @@ nav a.nav-link:hover {
 
 .form-wrapper{
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: 2;
     align-items: left;
     display: inline-block;
-    width: 35vw;
+    width: 100%;
 }
 
 .name-input{
     border: none;
     border-bottom: 1px solid black;
     outline: none; 
-    width: 28vw;
+    width: 35vw;
     margin-top: 1rem;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -395,7 +413,7 @@ nav a.nav-link:hover {
 }
 
 .email-input{
-    width: 28vw;
+    width: 35vw;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: none;
@@ -407,7 +425,7 @@ nav a.nav-link:hover {
 }
 
 .message{
-    width: 28vw;
+    width: 35vw;
     border: none;
     border-bottom: 1px solid black;
     outline: none; 
@@ -445,6 +463,7 @@ nav a.nav-link:hover {
 .info{
     display: inline-block;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .info-bold{
