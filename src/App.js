@@ -6,7 +6,7 @@ import Skills from './components/Skills.jsx';
 import Card from './components/Card.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import Tag from './components/Tag.jsx';
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import skillsArray  from './data/skills.json';
 import projectsArray from './data/projects.json';
