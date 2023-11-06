@@ -298,7 +298,7 @@ nav a.nav-link:hover {
     display: block;
     padding: 1.5rem;
     max-width: 30%;
-    height: 300px;
+    height: auto;
     transition: 0.2s ease-in-out;
     border: 0 !important;
     box-sizing: border-box;
